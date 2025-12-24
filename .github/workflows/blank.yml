@@ -40,14 +40,14 @@ jobs:
       - name: Validate template at subscription scope
         run: |
           az deployment sub validate \
-            --location westeurope \
+            --location switzerlandnorth \
             --template-file ./templates/main.bicep
 
       - name: What if preview
         if: ${{ success() }}
         run: |
           az deployment sub what-if \
-            --location westeurope \
+            --location switzerlandnorth \
             --template-file ./templates/main.bicep
 
       - name: Deploy subscription template
@@ -56,6 +56,6 @@ jobs:
         with:
           scope: subscription
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          region: westeurope
+          region: switzerlandnorth
           template: ./templates/main.bicep
           failOnStdErr: false

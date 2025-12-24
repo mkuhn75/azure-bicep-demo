@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 @description('Name of the Resource Group')
-param rgName string = "Test GitHub Actions MKU"
+param rgName string = 'Test GitHub Actions MKU'
 
 @description('Azure region for the Resource Group')
 param location string = 'switzerlandnorth'

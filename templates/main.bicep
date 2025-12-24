@@ -7,7 +7,7 @@ param rgName string
 param location string = 'switzerlandnorth'
 
 @description('Environment (prod, test, dev)')
-param environment string = 'prod'
+param environment string = 'test'
 
 @description('Cost Center / Billing reference')
 param costCenter string = 'IT'
